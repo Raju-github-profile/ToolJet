@@ -197,9 +197,6 @@ function SettingsPage(props) {
                             if (Math.round(file.size / 1024) > 2048) {
                               toast.error('File size cannot exceed more than 2MB');
                               e.target.value = null;
-                            } else if (!file.type.startsWith('image/')) {
-                              toast.error('Please select an image file');
-                              e.target.value = null;
                             } else {
                               setSelectedFile(file);
                             }
